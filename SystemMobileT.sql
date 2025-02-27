@@ -75,6 +75,9 @@ CREATE TABLE ventas(
     FOREIGN KEY (producto_id) REFERENCES productos(producto_id)
 );
 
+ALTER TABLE ventas
+ADD total DECIMAL(10,2);
+
 CREATE TABLE reparaciones(
 	reparacion_id INT PRIMARY KEY AUTO_INCREMENT,
     descripcion VARCHAR(500),

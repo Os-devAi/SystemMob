@@ -4,6 +4,7 @@ const express = require("express");
 // importar rutas
 const estadosRoutes = require("../app/routes/estadosRoutes");
 const productosRoutes = require("../app/routes/productosRoutes");
+const usuariosRoutes = require("../app/routes/usuariosRoutes");
 
 const app = express();
 app.use(express.json());
@@ -29,6 +30,7 @@ app.use(express.json());
 // rutas
 app.use(estadosRoutes);
 app.use(productosRoutes);
+app.use(usuariosRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
